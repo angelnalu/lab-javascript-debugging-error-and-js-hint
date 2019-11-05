@@ -8,7 +8,8 @@ function multiply(n1, n2){
   return n1 * n2;
 }
 function divide(n1, n2){
-  n1 / n2;
+  return n1 / n2;
+  
 }
 
 function make_calc(n1, n2, operation){
@@ -16,7 +17,7 @@ function make_calc(n1, n2, operation){
     return add(n1, n2);
   }
   if(operation == "subtract"){
-    subtract(n1, n2);
+    return subtract(n1, n2);
   }
   if(operation == "multiply"){
     return multiply(n1, n2);
@@ -25,18 +26,25 @@ function make_calc(n1, n2, operation){
     return divide(n1, n2);
   }
 }
+var result = 0;
 
 function init(){
-  var result = 0;
 
-  var sum = make_calc(2, 3, "add")
-  var subs = make_calc(2, 3, "subtract")
-  var mult = make_calc(2, 3, "multiply")
-  var div = make_calc(2, 3, "divide")
-
+  var sum = make_calc(2, 3, "add");
+  console.log(sum);
+  var subs = make_calc(2, 3, "subtract");
+  console.log(subs)
+  var mult = make_calc(2, 3, "multiply");
+  console.log(mult)
+  var div = make_calc(2, 3, "divide");
+  console.log(div);
+  
   result = sum + subs + mult + div;
 
-  console.lg(result);
+  return result;
 }
 
+
 init();
+
+
